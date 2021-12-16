@@ -1,0 +1,34 @@
+<div class="container d-flex flex-wrap">
+  <div *ngFor="let user of users; let i = index">
+    <div
+      class="card m-3"
+      style="width: 18rem"
+      *ngIf="i + 1 === users.length"
+      #theLastList
+    >
+      <img [src]="user.imageUrl" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name }} {{ user.lastName }}</h5>
+        <p class="card-text">
+          {{ user.title }}
+        </p>
+        <a [routerLink]="['/users', user.id, user.name]" class="btn btn-primary"
+          >User Details</a
+        >
+      </div>
+    </div>
+    <div class="card m-3" style="width: 18rem" *ngIf="i + 1 != users.length">
+      <img [src]="user.imageUrl" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ user.name }} {{ user.lastName }}</h5>
+        <p class="card-text">
+          {{ user.title }}
+        </p>
+        <a [routerLink]="['/users', user.id, user.name]" class="btn btn-primary"
+          >User Details</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<ngx-spinner></ngx-spinner>

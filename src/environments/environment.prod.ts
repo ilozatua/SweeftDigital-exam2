@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com`,
 };

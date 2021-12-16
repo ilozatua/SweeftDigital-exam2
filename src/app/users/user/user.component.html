@@ -1,0 +1,249 @@
+<section class="cssui-usercard container card text-center">
+  <div class="cssui-usercard__body">
+    <header class="cssui-usercard__header">
+      <img [src]="user.imageUrl" class="cssui-usercard__avatar" alt="Avatar" />
+      <div class="cssui-usercard__header-info">
+        <h3 class="cssui-usercard__name">
+          {{ user.prefix }} {{ user.name }}
+          <span class="cssui-usercard__name-label">{{ user.lastName }}</span>
+        </h3>
+        <span class="cssui-usercard__post">{{ user.title }}</span>
+      </div>
+    </header>
+    <div class="cssui-usercard__content">
+      <div class="cssui-slider">
+        <!-- the control elements of slider -->
+
+        <input
+          id="slide1"
+          type="radio"
+          class="cssui-slider__switch cssui-usercard__switch"
+          name="slider-controls"
+          checked
+          autofocus
+        />
+        <label
+          for="slide1"
+          class="cssui-slider__control cssui-usercard__control"
+        ></label>
+        <input
+          id="slide2"
+          type="radio"
+          class="cssui-slider__switch cssui-usercard__switch"
+          name="slider-controls"
+        />
+        <label
+          for="slide2"
+          class="cssui-slider__control cssui-usercard__control"
+        ></label>
+        <input
+          id="slide3"
+          type="radio"
+          class="cssui-slider__switch cssui-usercard__switch"
+          name="slider-controls"
+        />
+        <label
+          for="slide3"
+          class="cssui-slider__control cssui-usercard__control"
+        ></label>
+
+        <div class="cssui-slider__slides">
+          <!-- first slide -->
+
+          <div class="cssui-slider__slide">
+            <h4 class="cssui-usercard__title">About me</h4>
+            <div class="cssui-usercard__stats">
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >Job Description:
+                  </span>
+                  <span class="cssui-stats__value">{{
+                    user.jobDescriptor
+                  }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >job Area:</span
+                  >
+                  <span class="cssui-stats__value">{{ user.jobArea }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >job Type:</span
+                  >
+                  <span class="cssui-stats__value">{{ user.jobType }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >email</span
+                  >
+                  <span class="cssui-stats__value">{{ user.email }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- second slide -->
+
+          <div class="cssui-slider__slide">
+            <h4 class="cssui-usercard__title">About me</h4>
+            <div class="cssui-usercard__stats">
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >IP:</span
+                  >
+                  <span class="cssui-stats__value">{{ user.ip }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >company:</span
+                  >
+                  <span class="cssui-stats__value"
+                    >{{ user.company.name }} {{ user.company.suffix }}</span
+                  >
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >city:
+                  </span>
+                  <span class="cssui-stats__value">{{
+                    user.address.city
+                  }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >street Address:</span
+                  >
+                  <span class="cssui-stats__value">{{
+                    user.address.streetAddress
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- third slide -->
+
+          <div class="cssui-slider__slide">
+            <h4 class="cssui-usercard__title">About me</h4>
+            <div class="cssui-usercard__stats">
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >country:
+                  </span>
+                  <a href="#0" class="cssui-stats__value">{{
+                    user.address.country
+                  }}</a>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >zip Code</span
+                  >
+                  <a href="tel:79000000000" class="cssui-stats__value">{{
+                    user.address.zipCode
+                  }}</a>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >state</span
+                  >
+                  <span class="cssui-stats__value">{{
+                    user.address.state
+                  }}</span>
+                </div>
+              </div>
+              <div class="cssui-stats cssui-usercard__stats-item">
+                <div class="cssui-stats__info cssui-usercard__stats-info">
+                  <span class="cssui-stats__name cssui-usercard__stats-name"
+                    >Skype</span
+                  >
+                  <span class="cssui-stats__value">{{ user.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="cssui-usercard__footer">
+    <!-- <a href="#0" class="cssui-social cssui-usercard__social">
+      <i class="cssui-icon icon-twitter"></i>
+      <span class="cssui-social__name">twitter</span>
+    </a>
+    <a href="#0" class="cssui-social cssui-usercard__social">
+      <i class="cssui-icon icon-linkedin"></i>
+      <span class="cssui-social__name">linkedin</span>
+    </a>
+    <a href="#0" class="cssui-social cssui-usercard__social">
+      <i class="cssui-icon icon-codepen"></i>
+      <span class="cssui-social__name">codepen</span>
+    </a> -->
+  </footer>
+</section>
+
+<ng-container>
+  <h1 class="text-center">Friends of User:</h1>
+  <div class="container d-flex flex-wrap">
+    <div *ngFor="let friend of friends; let i = index">
+      <div
+        class="card m-3"
+        style="width: 18rem"
+        *ngIf="i + 1 === friends.length"
+        #theLastList
+      >
+        <img [src]="friend.imageUrl" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ friend.name }} {{ friend.lastName }}</h5>
+          <p class="card-text">
+            {{ friend.title }}
+          </p>
+          <a
+            [routerLink]="['/users', friend.id, friend.name]"
+            class="btn btn-primary"
+            >friend Details</a
+          >
+        </div>
+      </div>
+      <div
+        class="card m-3"
+        style="width: 18rem"
+        *ngIf="i + 1 != friends.length"
+      >
+        <img [src]="friend.imageUrl" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ friend.name }} {{ friend.lastName }}</h5>
+          <p class="card-text">
+            {{ friend.title }}
+          </p>
+          <a
+            [routerLink]="['/users', friend.id, friend.name]"
+            class="btn btn-primary"
+            >friend Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ngx-spinner></ngx-spinner>
